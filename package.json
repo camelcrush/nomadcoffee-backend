@@ -1,0 +1,20 @@
+{
+  "name": "nomadcoffee-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camelcrush/nomadcoffee-backend.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camelcrush/nomadcoffee-backend/issues"
+  },
+  "homepage": "https://github.com/camelcrush/nomadcoffee-backend#readme",
+  "dependencies": {
+    "apollo-server": "^2.25.2"
+  }
+}
