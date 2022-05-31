@@ -2,10 +2,20 @@ import client from "../client";
 
 export default {
   User: {
-    totalFollowing: ({ id }) =>
-      client.user.count({ where: { followers: { some: { id } } } }),
-    totalFollowers: ({ id }) =>
-      client.user.count({ where: { following: { some: { id } } } }),
+    totalFollowing: ({ id }, { lastId }) =>
+      client.user.count({
+        where: { followers: { some: { id } } },
+        take: 5,
+        skip: lastId ? 1 : 0,
+        ...(lastId && { cursor: { id: lastId } }),
+      }),
+    totalFollowers: ({ id }, { lastId }) =>
+      client.user.count({
+        where: { following: { some: { id } } },
+        take: 5,
+        skip: lastId ? 1 : 0,
+        ...(lastId && { cursor: { id: lastId } }),
+      }),
     isMe: ({ id }, _, { loggedInUser }) => {
       if (!loggedInUser) {
         return false;

@@ -25,7 +25,7 @@ export default {
       return {
         ok: true,
         following,
-        totalFollowing: Math.ceil(totalFollowing / 5),
+        totalPages: Math.ceil(totalFollowing / 5),
       };
     },
   },

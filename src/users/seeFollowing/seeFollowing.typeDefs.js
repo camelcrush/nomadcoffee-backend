@@ -5,7 +5,7 @@ export default gql`
     ok: Boolean!
     error: String
     following: [User]
-    totalFollowing: Int
+    totalPages: Int
   }
   type Query {
     seeFollowing(username: String!, page: Int!): SeeFollowingResponse!
