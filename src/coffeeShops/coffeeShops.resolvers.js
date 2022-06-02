@@ -2,6 +2,7 @@ import client from "../client";
 
 export default {
   CoffeeShop: {
+    user: ({ userId }) => client.user.findUnique({ where: { id: userId } }),
     photos: ({ id }, { offset }) =>
       client.coffeeShopPhoto.findMany({
         where: { coffeeShopId: id },

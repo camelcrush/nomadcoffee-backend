@@ -35,12 +35,10 @@ export default {
             name,
             latitude,
             longitude,
-            ...(categories && {
-              categories: {
-                disconnect: coffeeShop.categories,
-                connectOrCreate: processCategories(categories),
-              },
-            }),
+            categories: {
+              disconnect: coffeeShop.categories,
+              connectOrCreate: processCategories(categories),
+            },
           },
         });
         return {
