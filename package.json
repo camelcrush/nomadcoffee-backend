@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "nodemon --exec babel-node src/server.js",
     "migrate": "npx prisma migrate dev",
-    "studio": "npx prisma studio"
+    "studio": "npx prisma studio",
+    "build": "babel src -d build",
+    "start": "node build/server"
   },
   "repository": {
     "type": "git",
@@ -32,7 +34,8 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.0",
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
     "@babel/node": "^7.17.10",
     "@babel/preset-env": "^7.18.0",
     "nodemon": "^2.0.16",
