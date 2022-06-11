@@ -11,6 +11,7 @@ export default {
         { name, latitude, longitude, file, categories },
         { loggedInUser }
       ) => {
+        console.log(file);
         return await client.coffeeShop.create({
           data: {
             name,
