@@ -5,7 +5,7 @@ import { ApolloServer, gql } from "apollo-server-express";
 import { resolvers, typeDefs } from "./schema";
 import { getUser } from "./users/users.utils";
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4000;
 
 const apollo = new ApolloServer({
   typeDefs,

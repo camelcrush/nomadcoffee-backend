@@ -1,9 +1,6 @@
 import { gql } from "apollo-server-core";
 
 export default gql`
-  type Query {
-    hello: String!
-  }
   type CreateAccountResponse {
     ok: Boolean!
     error: String
